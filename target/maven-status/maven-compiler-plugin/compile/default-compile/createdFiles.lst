@@ -1,0 +1,5 @@
+ru\sibadi\demowebapp\repository\PersonRepository.class
+ru\sibadi\demowebapp\domain\Payment.class
+ru\sibadi\demowebapp\DemoWebappApplication.class
+ru\sibadi\demowebapp\domain\Person.class
+ru\sibadi\demowebapp\pages\PagesController.class
