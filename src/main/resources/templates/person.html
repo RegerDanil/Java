@@ -16,6 +16,6 @@
     <button type="submit">Отредактировать</button>
 </form>
 
-<h2><a th:href="${person.id} + '/payment'" th:text="'Его зачисления'">!!!</a></h2>
+<h2><a th:href="@{'/person/' + ${person.id} + '/payment'}" th:text="'Его зачисления'">!!!</a></h2>
 </body>
 </html>
