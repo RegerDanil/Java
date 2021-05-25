@@ -1,13 +1,13 @@
 package com.company;
 
-public class Operation {
+public class Operations {
 
     int number = 0;
     public Account debet;
     public Account credit;
     double money;
 
-    public Operation(int number, Account debet, Account credit, double money)
+    public Operations(int number, Account debet, Account credit, double money)
     {
         this.number = number;
         this.debet = debet;

@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuhBalance {
+public class Balance {
 
     private final List<Account> accounts;
-    private final List<Operation> operations = new ArrayList<>();
-    public BuhBalance()
+    private final List<Operations> operations = new ArrayList<>();
+    public Balance()
     {
         this.accounts = new ArrayList<>();
         accounts.add(new Account("41", "Товары", 0, 0));
@@ -19,7 +19,7 @@ public class BuhBalance {
         accounts.add(new Account("90", "Расчеты с персоналом по оплате труда", 0, 0));
     }
 
-    public BuhBalance(List<Account> accounts)
+    public Balance(List<Account> accounts)
     {
         this.accounts = accounts;
     }
@@ -28,13 +28,13 @@ public class BuhBalance {
         return accounts;
     }
 
-    public List<Operation> getOperations() {
+    public List<Operations> getOperations() {
         return operations;
     }
 
-    public Operation createOperation(Account a, Account b, double money) {
+    public Operations createOperation(Account a, Account b, double money) {
         int number = 0;
-        Operation operation = new Operation(number, a, b, money);
+        Operations operation = new Operations(number, a, b, money);
         operations.add(operation);
         return operation;
     }

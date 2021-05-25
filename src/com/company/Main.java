@@ -8,10 +8,9 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        BuhBalance buhBalance = null;
+        Balance buhBalance = null;
         if(new File("Accounts.txt").exists()){
             System.out.println("File is exists");
-            //чтение из файла
             Reader readerAccounts = new FileReader("Accounts.txt");
             BufferedReader bufferedReader = new BufferedReader(readerAccounts);
             List<Account> accounts = new ArrayList<>();
@@ -23,10 +22,10 @@ public class Main {
                 Account account = new Account(splitedLine[0], splitedLine[1], Double.parseDouble(splitedLine[2]), Double.parseDouble(splitedLine[3]));
                 accounts.add(account);
             }
-            buhBalance = new BuhBalance(accounts);
+            buhBalance = new Balance(accounts);
         }
         else {
-            buhBalance = new BuhBalance();
+            buhBalance = new Balance();
         }
 
         buhBalance.createOperation(buhBalance.getAccounts().get(2), buhBalance.getAccounts().get(1), 1000);
@@ -42,9 +41,9 @@ public class Main {
         //buhBalance.writeInTxtAccounts();
     }
 
-    public static void watchOperations(BuhBalance buhBalance) {
+    public static void watchOperations(Balance buhBalance) {
         System.out.println("\nOperations:");
-        for (Operation operation : buhBalance.getOperations()) {
+        for (Operations operation : buhBalance.getOperations()) {
             System.out.println(operation);
         }
         System.out.println("\n");
